@@ -6,7 +6,7 @@
         display: flex;
         font-family: sans-serif;
         font-size: 18pt;
-        color: #ff5757;
+        color: #2f8a85;
         padding: 5px;
         border: 1px solid #ffffff;
         justify-content: left;
@@ -59,16 +59,14 @@
 
     var greet;
 
-    if (hrs < 12)
-        greet = 'good morning, your name.  ';
-    else if (hrs >= 12 && hrs <= 17)
-        greet = 'good afternoon, your name. ';
-    else if (hrs >= 17 && hrs <= 24)
-        greet = 'good evening, your name.  ';
+    
+    greet = `Tomorrow's date is  ';
+
 
 
     document.getElementById('lbl').innerHTML = `
         <div class="container">
+          <div class="greeting">${greet}</div>
           <div id="date"> ${date}</div>
         <div/>
     `;
