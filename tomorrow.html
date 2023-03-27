@@ -51,10 +51,18 @@
 
     
     var today = new Date();
-    let tomorrow =  new Date();
-    tomorrow.setDate(today.getDate() + 1);
-    var dayOfWeek = weekday[tomorrow.getDay()];
-    var date = `${dayOfWeek}, ${tomorrow.getDate()} ${monthNames[tomorrow.getMonth()}, ${tomorrow.getFullYear()}`;
+    var hrs = today.getHours();
+    var dayOfWeek = weekday[today.getDay()];
+    var date = `${dayOfWeek}, ${monthNames[today.getMonth()]} ${today.getDate()}, ${today.getFullYear()}`;
+
+    var greet;
+
+    if (hrs < 12)
+        greet = 'good morning, your name.  ';
+    else if (hrs >= 12 && hrs <= 17)
+        greet = 'good afternoon, your name. ';
+    else if (hrs >= 17 && hrs <= 24)
+        greet = 'good evening, your name.  ';
 
 
     document.getElementById('lbl').innerHTML = `
