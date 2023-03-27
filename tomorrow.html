@@ -51,8 +51,8 @@
 
     
     var today = new Date();
-    var tomorrow = new Date(today);
-    tomorrow.setDate(tomorrow.getDate() + 1);
+    let tomorrow =  new Date();
+    tomorrow.setDate(today.getDate() + 1);
     var dayOfWeek = weekday[tomorrow.getDay()];
     var date = `${dayOfWeek}, ${tomorrow.getDate()} ${monthNames[tomorrow.getMonth()}, ${tomorrow.getFullYear()}`;
 
