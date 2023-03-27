@@ -51,9 +51,11 @@
 
     
     var today = new Date();
+    let tomorrow =  new Date()
+    tomorrow.setDate(today.getDate() + 1)
     var hrs = today.getHours();
-    var dayOfWeek = weekday[today.getDay()];
-    var date = `${dayOfWeek}, ${monthNames[today.getMonth()]} ${today.getDate()}, ${today.getFullYear()}`;
+    var dayOfWeek = weekday[tomorrow.getDay()];
+    var date = `${dayOfWeek}, ${monthNames[tomorrow.getMonth()]} ${tomorrow.getDate()}, ${tomorrow.getFullYear()}`;
 
     var greet;
 
